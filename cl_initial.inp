@@ -1,0 +1,89 @@
+* CHARMM script to read pdb file
+*
+set paramdir "/home/gns/Charmm/c35b1r1/toppar"
+
+open unit 1 read form name @paramdir/"top_all27_prot_na.rtf"
+read rtf card unit 1
+close unit 1
+
+open unit 1 read form name @paramdir/"par_all27_prot_na.prm"
+read param card unit 1
+close unit 1
+
+prnlev 5
+wrnlev 2
+
+READ SEQUENCE CARD
+* CL domain of Igg residues 112 - 214
+* 
+103
+ALA ALA PRO THR VAL SER ILE PHE PRO PRO SER SER GLU 
+GLN LEU THR SER GLY GLY ALA SER VAL VAL CYS PHE LEU 
+ASN ASN PHE TYR PRO LYS ASP ILE ASN VAL LYS TRP LYS 
+ILE ASP GLY SER GLU ARG GLN ASN GLY VAL LEU ASN SER 
+TRP THR ASP GLN ASP SER LYS ASP SER THR TYR SER MET 
+SER SER THR LEU THR LEU THR LYS ASP GLU TYR GLU ARG 
+HSD ASN SER TYR THR CYS GLU ALA THR HSD LYS THR SER 
+THR SER PRO ILE VAL LYS SER PHE ASN ARG ASN GLU
+
+prnlev 6
+generate cl warn setup
+
+! rename atoms to ensure pdb compatibility with charmm
+
+rename atom cd1 select resname ile .and. type cd end
+rename atom oxt select type ot1 end
+rename atom o select ires ?nres .and. type ot2 end
+
+open unit 11 read form name "cl.pdb"
+read coor pdb offset -111 unit 11 sele segid cl end
+close unit 11
+
+print coor sele type oxt end
+
+rename atom cd select resname ile .and. type cd1 end
+rename atom ot1 select type oxt end
+rename atom ot2 select ires ?nres .and. type o end
+
+print coor sele segid ch1 .and. .not. type H* end 
+
+define nonH select .not. hydrogen end
+set nonHatoms = ?nsel
+define missing select .not. hydrogen .and. .not. initialized end
+set missingatoms = ?nsel
+
+Calc fraction = (@nonHatoms - @missingatoms) / @nonHatoms
+! if fraction le 0.8 goto toomanywrong
+
+print coor select missing end
+
+!  Build missing atoms if just a few
+ic param
+ic build
+
+coor init sele type H* end
+
+hbuild
+
+! align system along principal axes of inertia, x largest 
+coor orie mass
+coor stat mass
+coor stat
+
+print coor sele .not. init end
+
+open unit 1 write card name cl_initial.psf
+write psf unit 1 card
+
+open unit 1 write card name cl_initial.cor
+write coor unit 1 card
+
+rename atom cd1 select resname ile .and. type cd end
+rename atom oxt select type ot1 end
+rename atom o select ires ?nres .and. type ot2 end
+
+open unit 1 write card name cl_initial.pdb
+write coor pdb unit 1 card
+
+
+stop

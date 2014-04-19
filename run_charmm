@@ -1,0 +1,4 @@
+#! /bin/bash
+echo -n "Running charmm just to check the input files"
+/home/javidi/charmm/charmm.beta.good/exec/gnu/charmm.medium.beta.cvel.one iseed=43245 temp=1500 <ch1_2bead.inp >ch1_2bead.out
+printf "\n"

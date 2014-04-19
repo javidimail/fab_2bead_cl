@@ -1,0 +1,1162 @@
+ Processing passed argument "iseed=425323"
+ Parameter: iseed <- "425323"
+ Processing passed argument "temp=300"
+ Parameter: temp <- "300"
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 35b1     August 15, 2008   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.6.24.4-64.fc8(x86_64)@master
+                 Created on  4/19/14 at 12:15:33 by user: javidi      
+
+            Maximum number of ATOMS:    240480, and RESidues:      240480
+            Current HEAP size:        10240000, and STACK size:  10000000
+
+ Processing passed argument "iseed=425323"
+ Parameter: ISEED <- "425323"
+ Processing passed argument "temp=300"
+ Parameter: TEMP <- "300"
+ RDTITL> * CHARMM SCRIPT TO READ PDB FILE
+ RDTITL> *
+  
+ CHARMM>    set paramdir "/home/gns/Charmm/c35b1r1/toppar"
+ Parameter: PARAMDIR <- ""/home/gns/Charmm/c35b1r1/toppar""
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 read form name @paramdir/"top_all27_prot_na.rtf"
+ Parameter: PARAMDIR -> ""/home/gns/Charmm/c35b1r1/toppar""
+ VOPEN> Attempting to open::/home/gns/Charmm/c35b1r1/toppar/top_all27_prot_na.rtf::
+ OPNLGU> Unit  1 opened for READONLY access to /home/gns/Charmm/c35b1r1/toppar/top_all27_prot_na.rtf
+  
+ CHARMM>    read rtf card unit 1
+ MAINIO> Residue topology file being read from unit   1.
+ TITLE> *>>>>>>>>CHARMM22 ALL-HYDROGEN TOPOLOGY FILE FOR PROTEINS <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>> AND NUCLEIC ACIDS <<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>> INCLUDES PHI, PSI CROSS TERM MAP (CMAP) CORRECTION <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>   JULY, 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> * ALL COMMENTS TO ADM JR. VIA THE CHARMM WEB SITE: WWW.CHARMM.ORG
+ TITLE> *               PARAMETER SET DISCUSSION FORUM
+ TITLE> *
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 read form name @paramdir/"par_all27_prot_na.prm"
+ Parameter: PARAMDIR -> ""/home/gns/Charmm/c35b1r1/toppar""
+ VOPEN> Attempting to open::/home/gns/Charmm/c35b1r1/toppar/par_all27_prot_na.prm::
+ OPNLGU> Unit  1 opened for READONLY access to /home/gns/Charmm/c35b1r1/toppar/par_all27_prot_na.prm
+  
+ CHARMM>    read param card unit 1
+
+          PARAMETER FILE BEING READ FROM UNIT  1
+ TITLE> *>>>>> CHARMM22 ALL-HYDROGEN PARAMETER FILE FOR PROTEINS <<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>> AND NUCLEIC ACIDS <<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>> INCLUDES PHI, PSI CROSS TERM MAP (CMAP) CORRECTION <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> DECEMBER, 2003 <<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> * ALL COMMENTS TO ADM JR. VIA THE CHARMM WEB SITE: WWW.CHARMM.ORG
+ TITLE> *               PARAMETER SET DISCUSSION FORUM
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    prnlev 5
+  
+ CHARMM>    wrnlev 2
+  
+ CHARMM>     
+  
+ CHARMM>    READ SEQUENCE CARD
+ MAINIO> Sequence information being read from unit   5.
+ RDTITL> * CL DOMAIN OF IGG RESIDUES 112 - 214
+ RDTITL> *
+  
+ SEQRDR>    103
+  
+ SEQRDR>    ALA ALA PRO THR VAL SER ILE PHE PRO PRO SER SER GLU
+  
+ SEQRDR>    GLN LEU THR SER GLY GLY ALA SER VAL VAL CYS PHE LEU
+  
+ SEQRDR>    ASN ASN PHE TYR PRO LYS ASP ILE ASN VAL LYS TRP LYS
+  
+ SEQRDR>    ILE ASP GLY SER GLU ARG GLN ASN GLY VAL LEU ASN SER
+  
+ SEQRDR>    TRP THR ASP GLN ASP SER LYS ASP SER THR TYR SER MET
+  
+ SEQRDR>    SER SER THR LEU THR LEU THR LYS ASP GLU TYR GLU ARG
+  
+ SEQRDR>    HSD ASN SER TYR THR CYS GLU ALA THR HSD LYS THR SER
+  
+ SEQRDR>    THR SER PRO ILE VAL LYS SER PHE ASN ARG ASN GLU
+
+          RESIDUE SEQUENCE --   103 RESIDUES
+          ALA ALA PRO THR VAL SER ILE PHE PRO PRO SER SER GLU GLN LEU THR SER GLY GLY ALA 
+          SER VAL VAL CYS PHE LEU ASN ASN PHE TYR PRO LYS ASP ILE ASN VAL LYS TRP LYS ILE 
+          ASP GLY SER GLU ARG GLN ASN GLY VAL LEU ASN SER TRP THR ASP GLN ASP SER LYS ASP 
+          SER THR TYR SER MET SER SER THR LEU THR LEU THR LYS ASP GLU TYR GLU ARG HSD ASN 
+          SER TYR THR CYS GLU ALA THR HSD LYS THR SER THR SER PRO ILE VAL LYS SER PHE ASN 
+          ARG ASN GLU 
+ ***** Message from SEQRDR ***** THE SYSTEM CONTAINS 23 TITRATABLE GROUPS
+ THE USER MUST PREDETERMINE THE PROTONATION STATE THROUGH THE SEQUENCE AND RTF
+ HIS -  0  ASP -  6  GLU -  6  LYS -  7  TYR -  4
+  
+ CHARMM>     
+  
+ CHARMM>    prnlev 6
+  
+ CHARMM>    generate cl warn setup
+ THE PATCH 'NTER' WILL BE USED FOR THE FIRST RESIDUE
+ THE PATCH 'CTER' WILL BE USED FOR THE LAST  RESIDUE
+ ** WARNING ** BOND NOT FOUND FOR RESIDUE   1 ALA   .
+ ATOMS "N     " "HN    " WERE REQUESTED.
+ ** WARNING ** IMPROPER NOT FOUND FOR RESIDUE   1 ALA   .
+ ATOMS "N     " "-C    " "CA    " "HN    " WERE REQUESTED.
+ ** WARNING ** CROSSTERM NOT FOUND FOR RESIDUE   1 ALA   .
+ ATOMS "-C    " "N     " "CA    " "C     "
+ ATOMS "N     " "CA    " "C     " "+N    " WERE REQUESTED.
+ ** WARNING ** DONOR NOT FOUND FOR RESIDUE   1 ALA   .
+ ATOMS "HN    " "N     " WERE REQUESTED.
+ ** WARNING ** BOND NOT FOUND FOR RESIDUE 103 GLU   .
+ ATOMS "C     " "+N    " WERE REQUESTED.
+ ** WARNING ** BOND NOT FOUND FOR RESIDUE 103 GLU   .
+ ATOMS "O     " "C     " WERE REQUESTED.
+ ** WARNING ** IMPROPER NOT FOUND FOR RESIDUE 103 GLU   .
+ ATOMS "C     " "CA    " "+N    " "O     " WERE REQUESTED.
+ ** WARNING ** CROSSTERM NOT FOUND FOR RESIDUE 103 GLU   .
+ ATOMS "-C    " "N     " "CA    " "C     "
+ ATOMS "N     " "CA    " "C     " "+N    " WERE REQUESTED.
+ ** WARNING ** ACCEPTOR NOT FOUND FOR RESIDUE 103 GLU   .
+ ATOMS "O     " "C     " WERE REQUESTED.
+ GENPSF> Segment   1 has been generated. Its identifier is CL.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =      103
+         Number of atoms         =     1574   Number of groups     =      479
+         Number of bonds         =     1592   Number of angles     =     2859
+         Number of dihedrals     =     4217   Number of impropers  =      276
+         Number of cross-terms   =      101
+         Number of HB acceptors  =      172   Number of HB donors  =      195
+         Number of NB exclusions =        0   Total charge =   -2.00000
+  
+ CHARMM>     
+  
+ CHARMM>    ! rename atoms to ensure pdb compatibility with charmm
+ CHARMM>     
+  
+ CHARMM>    rename atom cd1 select resname ile .and. type cd end
+ SELRPN>      4 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '7   ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '34  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '40  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '95  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+  
+ CHARMM>    rename atom oxt select type ot1 end
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'OT1 ' IS RENAMED TO 'OXT '
+  
+ CHARMM>    rename atom o select ires ?nres .and. type ot2 end
+ RDCMND substituted energy or value "?NRES" to "103"
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'OT2 ' IS RENAMED TO 'O   '
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 11 read form name "cl.pdb"
+ VOPEN> Attempting to open::cl.pdb::
+ OPNLGU> Unit 11 opened for READONLY access to cl.pdb
+  
+ CHARMM>    read coor pdb offset -111 unit 11 sele segid cl end
+  read CHARMM-pdb format
+ SELRPN>   1574 atoms have been selected out of   1574
+          SPATIAL COORDINATES BEING READ FROM UNIT 11
+ A RESIDUE OFFSET OF-111 WILL BE USED.
+ TITLE>  *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 ALA  HT1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     3     1 ALA  HT2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     4     1 ALA  HT3 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     6     1 ALA  HA  
+ ** WARNING ** After reading, there are no coordinates for selected atom:     8     1 ALA  HB1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     9     1 ALA  HB2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    10     1 ALA  HB3 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    14     2 ALA  HN  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    16     2 ALA  HA  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    18     2 ALA  HB1 
+
+ ** A total of   766 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>    close unit 11
+ VCLOSE: Closing unit   11 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    print coor sele type oxt end
+ SELRPN>      1 atoms have been selected out of   1574
+ NOTE: A SELECTED SUBSET OF ATOMS WILL BE USED
+
+
+          COORDINATE FILE MODULE
+ TITLE>  * CHARMM SCRIPT TO READ PDB FILE
+ TITLE>  *
+    1
+ 1573  103 GLU  OXT    1.74000   1.54300 -22.35800 CL   103   42.15000
+  
+ CHARMM>     
+  
+ CHARMM>    rename atom cd select resname ile .and. type cd1 end
+ SELRPN>      4 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '7   ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '34  ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '40  ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '95  ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+  
+ CHARMM>    rename atom ot1 select type oxt end
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'OXT ' IS RENAMED TO 'OT1 '
+  
+ CHARMM>    rename atom ot2 select ires ?nres .and. type o end
+ RDCMND substituted energy or value "?NRES" to "103"
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'O   ' IS RENAMED TO 'OT2 '
+  
+ CHARMM>     
+  
+ CHARMM>    print coor sele segid ch1 .and. .not. type H* end
+ SELRPN>      0 atoms have been selected out of   1574
+
+      ***** LEVEL  2 WARNING FROM <COORIO> *****
+      ***** ZERO ATOMS SPECIFIED TO WRITE. NO FILE CREATED
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  2
+
+  
+ CHARMM>     
+  
+ CHARMM>    define nonH select .not. hydrogen end
+ SELRPN>    808 atoms have been selected out of   1574
+  
+ CHARMM>    set nonHatoms = ?nsel
+ RDCMND substituted energy or value "?NSEL" to "808"
+ Parameter: NONHATOMS <- "808"
+  
+ CHARMM>    define missing select .not. hydrogen .and. .not. initialized end
+ SELRPN>      0 atoms have been selected out of   1574
+  
+ CHARMM>    set missingatoms = ?nsel
+ RDCMND substituted energy or value "?NSEL" to "0"
+ Parameter: MISSINGATOMS <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    Calc fraction = (@nonHatoms - @missingatoms) / @nonHatoms
+ Parameter: NONHATOMS -> "808"
+ Parameter: MISSINGATOMS -> "0"
+ Parameter: NONHATOMS -> "808"
+Evaluating: (808-0)/808
+ Parameter: FRACTION <- "1"
+  
+ CHARMM>    ! if fraction le 0.8 goto toomanywrong
+ CHARMM>     
+  
+ CHARMM>    print coor select missing end
+ SELRPN>      0 atoms have been selected out of   1574
+
+      ***** LEVEL  2 WARNING FROM <COORIO> *****
+      ***** ZERO ATOMS SPECIFIED TO WRITE. NO FILE CREATED
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  2
+
+  
+ CHARMM>     
+  
+ CHARMM>    !  Build missing atoms if just a few
+ CHARMM>    ic param
+  
+ CHARMM>    ic build
+  
+ CHARMM>     
+  
+ CHARMM>    coor init sele type H* end
+ SELRPN>    766 atoms have been selected out of   1574
+ SELECTED COORDINATES INITIALIZED IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    hbuild
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found   4451 exclusions and   4142 interactions(1-4)
+ <MAKGRP> found   1393 group exclusions.
+
+ CUToff Hydrogen Bond  distance =    0.5000           Angle =   90.0000
+ CuT switching ON HB dist. =     3.5000 OFf HB dist. =    4.0000
+ CuT switching ON Hb Angle =    50.0000 OFf Hb Angle =   70.0000
+ ACCEptor antecedents included
+ dihedral PHI STePs for spin =   10.0000
+ cutoff for water acceptor search CUTWat=    7.5000
+
+ Place: HA  ,    ,    , constructed for donor CL   1    ALA  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   2    ALA  N   .
+ Place: HA  ,    ,    , constructed for donor CL   2    ALA  CA  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   3    PRO  CD  .
+ Place: HA  ,    ,    , constructed for donor CL   3    PRO  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   3    PRO  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   3    PRO  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   4    THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   4    THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   4    THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   5    VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   5    VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   5    VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   6    SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   6    SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   6    SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   7    ILE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   7    ILE  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   7    ILE  CB  .
+ Place: HG11,HG12,    , constructed for donor CL   7    ILE  CG1 .
+ Place: HN  ,    ,    , constructed for donor CL   8    PHE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   8    PHE  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   8    PHE  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   8    PHE  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   8    PHE  CE1 .
+ Place: HZ  ,    ,    , constructed for donor CL   8    PHE  CZ  .
+ Place: HD2 ,    ,    , constructed for donor CL   8    PHE  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   8    PHE  CE2 .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   9    PRO  CD  .
+ Place: HA  ,    ,    , constructed for donor CL   9    PRO  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   9    PRO  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   9    PRO  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   10   PRO  CD  .
+ Place: HA  ,    ,    , constructed for donor CL   10   PRO  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   10   PRO  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   10   PRO  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   11   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   11   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   11   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   12   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   12   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   12   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   13   GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   13   GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   13   GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   13   GLU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   14   GLN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   14   GLN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   14   GLN  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   14   GLN  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   15   LEU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   15   LEU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   15   LEU  CB  .
+ Place: HG  ,    ,    , constructed for donor CL   15   LEU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   16   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   16   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   16   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   17   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   17   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   17   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   18   GLY  N   .
+ Place: HA1 ,HA2 ,    , constructed for donor CL   18   GLY  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   19   GLY  N   .
+ Place: HA1 ,HA2 ,    , constructed for donor CL   19   GLY  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   20   ALA  N   .
+ Place: HA  ,    ,    , constructed for donor CL   20   ALA  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   21   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   21   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   21   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   22   VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   22   VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   22   VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   23   VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   23   VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   23   VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   24   CYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   24   CYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   24   CYS  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   25   PHE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   25   PHE  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   25   PHE  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   25   PHE  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   25   PHE  CE1 .
+ Place: HZ  ,    ,    , constructed for donor CL   25   PHE  CZ  .
+ Place: HD2 ,    ,    , constructed for donor CL   25   PHE  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   25   PHE  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   26   LEU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   26   LEU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   26   LEU  CB  .
+ Place: HG  ,    ,    , constructed for donor CL   26   LEU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   27   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   27   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   27   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   28   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   28   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   28   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   29   PHE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   29   PHE  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   29   PHE  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   29   PHE  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   29   PHE  CE1 .
+ Place: HZ  ,    ,    , constructed for donor CL   29   PHE  CZ  .
+ Place: HD2 ,    ,    , constructed for donor CL   29   PHE  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   29   PHE  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   30   TYR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   30   TYR  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   30   TYR  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   30   TYR  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   30   TYR  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   30   TYR  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   30   TYR  CE2 .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   31   PRO  CD  .
+ Place: HA  ,    ,    , constructed for donor CL   31   PRO  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   31   PRO  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   31   PRO  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   32   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   32   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   32   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   32   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   32   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   32   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   33   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   33   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   33   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   34   ILE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   34   ILE  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   34   ILE  CB  .
+ Place: HG11,HG12,    , constructed for donor CL   34   ILE  CG1 .
+ Place: HN  ,    ,    , constructed for donor CL   35   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   35   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   35   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   36   VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   36   VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   36   VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   37   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   37   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   37   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   37   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   37   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   37   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   38   TRP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   38   TRP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   38   TRP  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   38   TRP  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   38   TRP  NE1 .
+ Place: HE3 ,    ,    , constructed for donor CL   38   TRP  CE3 .
+ Place: HZ3 ,    ,    , constructed for donor CL   38   TRP  CZ3 .
+ Place: HZ2 ,    ,    , constructed for donor CL   38   TRP  CZ2 .
+ Place: HH2 ,    ,    , constructed for donor CL   38   TRP  CH2 .
+ Place: HN  ,    ,    , constructed for donor CL   39   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   39   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   39   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   39   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   39   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   39   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   40   ILE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   40   ILE  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   40   ILE  CB  .
+ Place: HG11,HG12,    , constructed for donor CL   40   ILE  CG1 .
+ Place: HN  ,    ,    , constructed for donor CL   41   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   41   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   41   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   42   GLY  N   .
+ Place: HA1 ,HA2 ,    , constructed for donor CL   42   GLY  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   43   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   43   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   43   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   44   GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   44   GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   44   GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   44   GLU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   45   ARG  N   .
+ Place: HA  ,    ,    , constructed for donor CL   45   ARG  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   45   ARG  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   45   ARG  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   45   ARG  CD  .
+ Place: HE  ,    ,    , constructed for donor CL   45   ARG  NE  .
+ Place: HN  ,    ,    , constructed for donor CL   46   GLN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   46   GLN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   46   GLN  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   46   GLN  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   47   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   47   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   47   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   48   GLY  N   .
+ Place: HA1 ,HA2 ,    , constructed for donor CL   48   GLY  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   49   VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   49   VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   49   VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   50   LEU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   50   LEU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   50   LEU  CB  .
+ Place: HG  ,    ,    , constructed for donor CL   50   LEU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   51   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   51   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   51   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   52   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   52   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   52   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   53   TRP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   53   TRP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   53   TRP  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   53   TRP  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   53   TRP  NE1 .
+ Place: HE3 ,    ,    , constructed for donor CL   53   TRP  CE3 .
+ Place: HZ3 ,    ,    , constructed for donor CL   53   TRP  CZ3 .
+ Place: HZ2 ,    ,    , constructed for donor CL   53   TRP  CZ2 .
+ Place: HH2 ,    ,    , constructed for donor CL   53   TRP  CH2 .
+ Place: HN  ,    ,    , constructed for donor CL   54   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   54   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   54   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   55   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   55   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   55   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   56   GLN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   56   GLN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   56   GLN  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   56   GLN  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   57   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   57   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   57   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   58   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   58   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   58   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   59   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   59   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   59   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   59   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   59   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   59   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   60   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   60   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   60   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   61   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   61   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   61   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   62   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   62   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   62   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   63   TYR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   63   TYR  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   63   TYR  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   63   TYR  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   63   TYR  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   63   TYR  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   63   TYR  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   64   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   64   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   64   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   65   MET  N   .
+ Place: HA  ,    ,    , constructed for donor CL   65   MET  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   65   MET  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   65   MET  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   66   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   66   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   66   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   67   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   67   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   67   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   68   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   68   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   68   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   69   LEU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   69   LEU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   69   LEU  CB  .
+ Place: HG  ,    ,    , constructed for donor CL   69   LEU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   70   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   70   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   70   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   71   LEU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   71   LEU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   71   LEU  CB  .
+ Place: HG  ,    ,    , constructed for donor CL   71   LEU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   72   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   72   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   72   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   73   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   73   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   73   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   73   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   73   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   73   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   74   ASP  N   .
+ Place: HA  ,    ,    , constructed for donor CL   74   ASP  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   74   ASP  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   75   GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   75   GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   75   GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   75   GLU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   76   TYR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   76   TYR  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   76   TYR  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   76   TYR  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   76   TYR  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   76   TYR  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   76   TYR  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   77   GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   77   GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   77   GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   77   GLU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   78   ARG  N   .
+ Place: HA  ,    ,    , constructed for donor CL   78   ARG  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   78   ARG  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   78   ARG  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   78   ARG  CD  .
+ Place: HE  ,    ,    , constructed for donor CL   78   ARG  NE  .
+ Place: HN  ,    ,    , constructed for donor CL   79   HSD  N   .
+ Place: HA  ,    ,    , constructed for donor CL   79   HSD  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   79   HSD  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   79   HSD  ND1 .
+ Place: HE1 ,    ,    , constructed for donor CL   79   HSD  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   79   HSD  CD2 .
+ Place: HN  ,    ,    , constructed for donor CL   80   ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   80   ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   80   ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   81   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   81   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   81   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   82   TYR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   82   TYR  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   82   TYR  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   82   TYR  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   82   TYR  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   82   TYR  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   82   TYR  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   83   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   83   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   83   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   84   CYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   84   CYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   84   CYS  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   85   GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   85   GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   85   GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   85   GLU  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   86   ALA  N   .
+ Place: HA  ,    ,    , constructed for donor CL   86   ALA  CA  .
+ Place: HN  ,    ,    , constructed for donor CL   87   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   87   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   87   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   88   HSD  N   .
+ Place: HA  ,    ,    , constructed for donor CL   88   HSD  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   88   HSD  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   88   HSD  ND1 .
+ Place: HE1 ,    ,    , constructed for donor CL   88   HSD  CE1 .
+ Place: HD2 ,    ,    , constructed for donor CL   88   HSD  CD2 .
+ Place: HN  ,    ,    , constructed for donor CL   89   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   89   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   89   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   89   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   89   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   89   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   90   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   90   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   90   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   91   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   91   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   91   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   92   THR  N   .
+ Place: HA  ,    ,    , constructed for donor CL   92   THR  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   92   THR  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   93   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   93   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   93   SER  CB  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   94   PRO  CD  .
+ Place: HA  ,    ,    , constructed for donor CL   94   PRO  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   94   PRO  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   94   PRO  CG  .
+ Place: HN  ,    ,    , constructed for donor CL   95   ILE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   95   ILE  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   95   ILE  CB  .
+ Place: HG11,HG12,    , constructed for donor CL   95   ILE  CG1 .
+ Place: HN  ,    ,    , constructed for donor CL   96   VAL  N   .
+ Place: HA  ,    ,    , constructed for donor CL   96   VAL  CA  .
+ Place: HB  ,    ,    , constructed for donor CL   96   VAL  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   97   LYS  N   .
+ Place: HA  ,    ,    , constructed for donor CL   97   LYS  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   97   LYS  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   97   LYS  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   97   LYS  CD  .
+ Place: HE1 ,HE2 ,    , constructed for donor CL   97   LYS  CE  .
+ Place: HN  ,    ,    , constructed for donor CL   98   SER  N   .
+ Place: HA  ,    ,    , constructed for donor CL   98   SER  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   98   SER  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   99   PHE  N   .
+ Place: HA  ,    ,    , constructed for donor CL   99   PHE  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   99   PHE  CB  .
+ Place: HD1 ,    ,    , constructed for donor CL   99   PHE  CD1 .
+ Place: HE1 ,    ,    , constructed for donor CL   99   PHE  CE1 .
+ Place: HZ  ,    ,    , constructed for donor CL   99   PHE  CZ  .
+ Place: HD2 ,    ,    , constructed for donor CL   99   PHE  CD2 .
+ Place: HE2 ,    ,    , constructed for donor CL   99   PHE  CE2 .
+ Place: HN  ,    ,    , constructed for donor CL   100  ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   100  ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   100  ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   101  ARG  N   .
+ Place: HA  ,    ,    , constructed for donor CL   101  ARG  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   101  ARG  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   101  ARG  CG  .
+ Place: HD1 ,HD2 ,    , constructed for donor CL   101  ARG  CD  .
+ Place: HE  ,    ,    , constructed for donor CL   101  ARG  NE  .
+ Place: HN  ,    ,    , constructed for donor CL   102  ASN  N   .
+ Place: HA  ,    ,    , constructed for donor CL   102  ASN  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   102  ASN  CB  .
+ Place: HN  ,    ,    , constructed for donor CL   103  GLU  N   .
+ Place: HA  ,    ,    , constructed for donor CL   103  GLU  CA  .
+ Place: HB1 ,HB2 ,    , constructed for donor CL   103  GLU  CB  .
+ Place: HG1 ,HG2 ,    , constructed for donor CL   103  GLU  CG  .
+
+ NBONDX:      1095 atom and      0 group interactions within 14.00 A.
+ Spin: HT1 ,HT2 ,HT3 , constructed for donor CL   1    ALA  N   .
+
+ NBONDX:      1179 atom and      0 group interactions within 14.00 A.
+ Spin: HB1 ,HB2 ,HB3 , constructed for donor CL   1    ALA  CB  .
+
+ NBONDX:      1194 atom and      0 group interactions within 14.00 A.
+ Spin: HB1 ,HB2 ,HB3 , constructed for donor CL   2    ALA  CB  .
+
+ NBONDX:       392 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   4    THR  OG1 .
+
+ NBONDX:      1137 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   4    THR  CG2 .
+
+ NBONDX:      1872 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   5    VAL  CG1 .
+
+ NBONDX:      1881 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   5    VAL  CG2 .
+
+ NBONDX:       398 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   6    SER  OG  .
+
+ NBONDX:      1656 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   7    ILE  CG2 .
+
+ NBONDX:      2022 atom and      0 group interactions within 14.00 A.
+ Spin: HD1 ,HD2 ,HD3 , constructed for donor CL   7    ILE  CD  .
+
+ NBONDX:       308 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   11   SER  OG  .
+
+ NBONDX:       224 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   12   SER  OG  .
+
+ NBONDX:       828 atom and      0 group interactions within 14.00 A.
+ Spin: HE21,HE22,    , constructed for donor CL   14   GLN  NE2 .
+
+ NBONDX:      1317 atom and      0 group interactions within 14.00 A.
+ Spin: HD11,HD12,HD13, constructed for donor CL   15   LEU  CD1 .
+
+ NBONDX:      1308 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,HD23, constructed for donor CL   15   LEU  CD2 .
+
+ NBONDX:       210 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   16   THR  OG1 .
+
+ NBONDX:       540 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   16   THR  CG2 .
+
+ NBONDX:       220 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   17   SER  OG  .
+
+ NBONDX:      1659 atom and      0 group interactions within 14.00 A.
+ Spin: HB1 ,HB2 ,HB3 , constructed for donor CL   20   ALA  CB  .
+
+ NBONDX:       517 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   21   SER  OG  .
+
+ NBONDX:      2286 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   22   VAL  CG1 .
+
+ NBONDX:      2250 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   22   VAL  CG2 .
+
+ NBONDX:      1668 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   23   VAL  CG1 .
+
+ NBONDX:      1650 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   23   VAL  CG2 .
+
+ NBONDX:       705 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   24   CYS  SG  .
+
+ NBONDX:      2178 atom and      0 group interactions within 14.00 A.
+ Spin: HD11,HD12,HD13, constructed for donor CL   26   LEU  CD1 .
+
+ NBONDX:      2199 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,HD23, constructed for donor CL   26   LEU  CD2 .
+
+ NBONDX:       952 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   27   ASN  ND2 .
+
+ NBONDX:       838 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   28   ASN  ND2 .
+
+ NBONDX:       280 atom and      0 group interactions within 14.00 A.
+ Spin: HH  ,    ,    , constructed for donor CL   30   TYR  OH  .
+
+ NBONDX:       966 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   32   LYS  NZ  .
+
+ NBONDX:      1881 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   34   ILE  CG2 .
+
+ NBONDX:      2028 atom and      0 group interactions within 14.00 A.
+ Spin: HD1 ,HD2 ,HD3 , constructed for donor CL   34   ILE  CD  .
+
+ NBONDX:       942 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   35   ASN  ND2 .
+
+ NBONDX:      2229 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   36   VAL  CG1 .
+
+ NBONDX:      2265 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   36   VAL  CG2 .
+
+ NBONDX:      1077 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   37   LYS  NZ  .
+
+ NBONDX:      1206 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   39   LYS  NZ  .
+
+ NBONDX:      1725 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   40   ILE  CG2 .
+
+ NBONDX:      1899 atom and      0 group interactions within 14.00 A.
+ Spin: HD1 ,HD2 ,HD3 , constructed for donor CL   40   ILE  CD  .
+
+ NBONDX:       350 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   43   SER  OG  .
+
+ NBONDX:      1008 atom and      0 group interactions within 14.00 A.
+ Spin: HH11,HH12,    , constructed for donor CL   45   ARG  NH1 .
+
+ NBONDX:       954 atom and      0 group interactions within 14.00 A.
+ Spin: HH21,HH22,    , constructed for donor CL   45   ARG  NH2 .
+
+ NBONDX:       482 atom and      0 group interactions within 14.00 A.
+ Spin: HE21,HE22,    , constructed for donor CL   46   GLN  NE2 .
+
+ NBONDX:       496 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   47   ASN  ND2 .
+
+ NBONDX:      1788 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   49   VAL  CG1 .
+
+ NBONDX:      1767 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   49   VAL  CG2 .
+
+ NBONDX:      1002 atom and      0 group interactions within 14.00 A.
+ Spin: HD11,HD12,HD13, constructed for donor CL   50   LEU  CD1 .
+
+ NBONDX:       948 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,HD23, constructed for donor CL   50   LEU  CD2 .
+
+ NBONDX:      1258 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   51   ASN  ND2 .
+
+ NBONDX:       365 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   52   SER  OG  .
+
+ NBONDX:       464 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   54   THR  OG1 .
+
+ NBONDX:      1329 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   54   THR  CG2 .
+
+ NBONDX:       640 atom and      0 group interactions within 14.00 A.
+ Spin: HE21,HE22,    , constructed for donor CL   56   GLN  NE2 .
+
+ NBONDX:       168 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   58   SER  OG  .
+
+ NBONDX:       291 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   59   LYS  NZ  .
+
+ NBONDX:       257 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   61   SER  OG  .
+
+ NBONDX:       430 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   62   THR  OG1 .
+
+ NBONDX:      1317 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   62   THR  CG2 .
+
+ NBONDX:       360 atom and      0 group interactions within 14.00 A.
+ Spin: HH  ,    ,    , constructed for donor CL   63   TYR  OH  .
+
+ NBONDX:       541 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   64   SER  OG  .
+
+ NBONDX:      1986 atom and      0 group interactions within 14.00 A.
+ Spin: HE1 ,HE2 ,HE3 , constructed for donor CL   65   MET  CE  .
+
+ NBONDX:       538 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   66   SER  OG  .
+
+ NBONDX:       744 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   67   SER  OG  .
+
+ NBONDX:       576 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   68   THR  OG1 .
+
+ NBONDX:      1794 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   68   THR  CG2 .
+
+ NBONDX:      2061 atom and      0 group interactions within 14.00 A.
+ Spin: HD11,HD12,HD13, constructed for donor CL   69   LEU  CD1 .
+
+ NBONDX:      2307 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,HD23, constructed for donor CL   69   LEU  CD2 .
+
+ NBONDX:       550 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   70   THR  OG1 .
+
+ NBONDX:      1551 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   70   THR  CG2 .
+
+ NBONDX:      2013 atom and      0 group interactions within 14.00 A.
+ Spin: HD11,HD12,HD13, constructed for donor CL   71   LEU  CD1 .
+
+ NBONDX:      1827 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,HD23, constructed for donor CL   71   LEU  CD2 .
+
+ NBONDX:       394 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   72   THR  OG1 .
+
+ NBONDX:      1110 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   72   THR  CG2 .
+
+ NBONDX:      1014 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   73   LYS  NZ  .
+
+ NBONDX:       648 atom and      0 group interactions within 14.00 A.
+ Spin: HH  ,    ,    , constructed for donor CL   76   TYR  OH  .
+
+ NBONDX:       612 atom and      0 group interactions within 14.00 A.
+ Spin: HH11,HH12,    , constructed for donor CL   78   ARG  NH1 .
+
+ NBONDX:       628 atom and      0 group interactions within 14.00 A.
+ Spin: HH21,HH22,    , constructed for donor CL   78   ARG  NH2 .
+
+ NBONDX:       696 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   80   ASN  ND2 .
+
+ NBONDX:       470 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   81   SER  OG  .
+
+ NBONDX:       677 atom and      0 group interactions within 14.00 A.
+ Spin: HH  ,    ,    , constructed for donor CL   82   TYR  OH  .
+
+ NBONDX:       599 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   83   THR  OG1 .
+
+ NBONDX:      1902 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   83   THR  CG2 .
+
+ NBONDX:       822 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   84   CYS  SG  .
+
+ NBONDX:      2190 atom and      0 group interactions within 14.00 A.
+ Spin: HB1 ,HB2 ,HB3 , constructed for donor CL   86   ALA  CB  .
+
+ NBONDX:       518 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   87   THR  OG1 .
+
+ NBONDX:      1335 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   87   THR  CG2 .
+
+ NBONDX:      1338 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   89   LYS  NZ  .
+
+ NBONDX:       463 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   90   THR  OG1 .
+
+ NBONDX:      1251 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   90   THR  CG2 .
+
+ NBONDX:       314 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   91   SER  OG  .
+
+ NBONDX:       180 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   92   THR  OG1 .
+
+ NBONDX:       522 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   92   THR  CG2 .
+
+ NBONDX:       260 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   93   SER  OG  .
+
+ NBONDX:      1719 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   95   ILE  CG2 .
+
+ NBONDX:      1698 atom and      0 group interactions within 14.00 A.
+ Spin: HD1 ,HD2 ,HD3 , constructed for donor CL   95   ILE  CD  .
+
+ NBONDX:      1569 atom and      0 group interactions within 14.00 A.
+ Spin: HG11,HG12,HG13, constructed for donor CL   96   VAL  CG1 .
+
+ NBONDX:      1437 atom and      0 group interactions within 14.00 A.
+ Spin: HG21,HG22,HG23, constructed for donor CL   96   VAL  CG2 .
+
+ NBONDX:      1110 atom and      0 group interactions within 14.00 A.
+ Spin: HZ1 ,HZ2 ,HZ3 , constructed for donor CL   97   LYS  NZ  .
+
+ NBONDX:       626 atom and      0 group interactions within 14.00 A.
+ Spin: HG1 ,    ,    , constructed for donor CL   98   SER  OG  .
+
+ NBONDX:       688 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   100  ASN  ND2 .
+
+ NBONDX:       918 atom and      0 group interactions within 14.00 A.
+ Spin: HH11,HH12,    , constructed for donor CL   101  ARG  NH1 .
+
+ NBONDX:       752 atom and      0 group interactions within 14.00 A.
+ Spin: HH21,HH22,    , constructed for donor CL   101  ARG  NH2 .
+
+ NBONDX:       426 atom and      0 group interactions within 14.00 A.
+ Spin: HD21,HD22,    , constructed for donor CL   102  ASN  ND2 .
+  
+ CHARMM>     
+  
+ CHARMM>    ! align system along principal axes of inertia, x largest
+ CHARMM>    coor orie mass
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+ 951569.02172873 563130.05937786-191848.41832981
+                 886206.93100389-310619.25072134
+                                 574043.39233361
+
+ Transpose of the rotation matrix
+     0.325748   -0.666531   -0.670541
+    -0.810924    0.167671   -0.560615
+     0.486097    0.726377   -0.485887
+ CENTER OF ATOMS BEFORE TRANSLATION    -6.18657     0.14745    -3.89728
+ AXIS OF ROTATION IS -0.741193  0.666121  0.083158  ANGLE IS  119.75
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor stat mass
+ STATISTICS FOR      1574 SELECTED ATOMS:
+    XMIN =  -23.461047 XMAX =   21.958571 XAVE =    0.000000
+    YMIN =  -16.704132 YMAX =   16.973682 YAVE =    0.000000
+    ZMIN =  -14.591363 ZMAX =   14.135132 ZAVE =    0.000000
+    WMIN =    0.000000 WMAX =   85.690000 WAVE =   33.012728
+  
+ CHARMM>    coor stat
+ STATISTICS FOR      1574 SELECTED ATOMS:
+    XMIN =  -23.461047 XMAX =   21.958571 XAVE =   -0.034862
+    YMIN =  -16.704132 YMAX =   16.973682 YAVE =    0.096888
+    ZMIN =  -14.591363 ZMAX =   14.135132 ZAVE =   -0.006783
+    WMIN =    0.000000 WMAX =   85.690000 WAVE =   18.051779
+  
+ CHARMM>     
+  
+ CHARMM>    print coor sele .not. init end
+ SELRPN>      0 atoms have been selected out of   1574
+
+      ***** LEVEL  2 WARNING FROM <COORIO> *****
+      ***** ZERO ATOMS SPECIFIED TO WRITE. NO FILE CREATED
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  2
+
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 write card name cl_initial.psf
+ VOPEN> Attempting to open::cl_initial.psf::
+ OPNLGU> Unit  1 opened for WRITE access to cl_initial.psf
+  
+ CHARMM>    write psf unit 1 card
+ RDTITL>  
+ RDTITL> No title read.
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 write card name cl_initial.cor
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit    1 with status "KEEP"
+ VOPEN> Attempting to open::cl_initial.cor::
+ OPNLGU> Unit  1 opened for WRITE access to cl_initial.cor
+  
+ CHARMM>    write coor unit 1 card
+ RDTITL>  
+ RDTITL> No title read.
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    rename atom cd1 select resname ile .and. type cd end
+ SELRPN>      4 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '7   ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '34  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '40  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '95  ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+  
+ CHARMM>    rename atom oxt select type ot1 end
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'OT1 ' IS RENAMED TO 'OXT '
+  
+ CHARMM>    rename atom o select ires ?nres .and. type ot2 end
+ RDCMND substituted energy or value "?NRES" to "103"
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '103 ', ATOM 'OT2 ' IS RENAMED TO 'O   '
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 write card name cl_initial.pdb
+ VOPEN> Attempting to open::cl_initial.pdb::
+ OPNLGU> Unit  1 opened for WRITE access to cl_initial.pdb
+  
+ CHARMM>    write coor pdb unit 1 card
+ RDTITL>  
+ RDTITL> No title read.
+  Write CHARMM-pdb format
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit    1 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+ Total time                      0.65 Other:            0.00
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS  254504
+                    STACK CURRENTLY IN USE IS         0
+                    MOST SEVERE WARNING WAS AT LEVEL  2
+                    HEAP PRINTOUT-  HEAP SIZE         10240000
+                    SPACE CURRENTLY IN USE IS            13824
+                    MAXIMUM SPACE USED IS               100414
+                    FREE LIST
+  PRINHP> ADDRESS:               1 LENGTH:        10225676 NEXT:        10239501
+  PRINHP> ADDRESS:        10239501 LENGTH:             500 NEXT:               0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.65  SECONDS 
+                         CPU TIME:     0.64  SECONDS 

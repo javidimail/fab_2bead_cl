@@ -1,0 +1,4 @@
+#! /bin/bash
+echo -n "Running charmm just to check the input files"
+/home/javidi/charmm/go_model_sam/charmm-gomodel2 iseed=425323 temp=300 <coor.inp >coor.out
+printf "\n"

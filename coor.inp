@@ -1,0 +1,163 @@
+* Determine position of side chain center of mass
+* and shift CB at this position 
+*
+  
+! Open and read amino acid topology file
+
+set paramdir "/home/gns/Charmm/c35b1r1/toppar"
+
+open unit 1 read form name @paramdir/"top_all27_prot_na.rtf"
+read rtf card unit 1
+close unit 1
+
+open unit 1 read form name @paramdir/"par_all27_prot_na.prm"
+read param card unit 1
+close unit 1
+
+prnlev 5
+bomlev -5
+
+open read unit 20 card name "cl_initial.psf"
+read psf card unit 20
+
+open read unit 21 card name "cl_initial.cor" 
+read coor card unit 21
+
+! Read coordinates
+read coordinate card unit 21
+close unit 21
+
+! Write output coordinates
+
+* Start writing parameters in separat files
+ 
+! Open bond.prm, angel.prm, dihedral.prm and imph.prm
+open write card unit 31 name bond.prm
+open write card unit 32 name angle.prm
+open write card unit 33 name dihedral.prm
+open write card unit 34 name imph.prm
+
+
+coor stat
+set nmin 1
+set nmax ?nres
+
+set i @nmin
+!set oldi 0
+!set nexti 0
+!set nextti 0
+ 
+define backbone sele type N .or. type C .or. - 
+	type CA .or. type O .or. type OT* end
+define heavy sele .not. type H* end
+
+label loop_res
+
+print coor sele resid @i .and. heavy .and. .not. backbone end
+coor stat mass sele resid @i .and. heavy .and. .not. backbone end
+
+! process Gly separately due to absence of side chain
+
+scalar x set ?xave select resid @i .and. type CB end
+scalar y set ?yave select resid @i .and. type CB end
+scalar z set ?zave select resid @i .and. type CB end
+
+if @i eq 1 goto nextres
+else if @i eq @nmax goto nextres
+endif
+
+calc oldi = @i - 1
+calc nexti = @i + 1 
+
+if @i eq @nmax - 1 goto nextres
+
+calc nextti = @i + 2
+  
+* Calculate parameters and write them into differnt files
+   
+
+! calculate backbone bond length
+quick sele resid @oldi .and. type CA end -
+        sele resid @i .and. type CA end
+set cacadist ?dist
+
+! calcuale CA-CB lenght
+quick sele resid @i .and. type CA end -
+        sele resid @i .and. type CB end
+set cacbdist ?dist
+
+
+write title unit 31
+*A@oldi A@i 100 @cacadist
+*A@i B@i 100 @cacbdist
+
+
+! calculate CA-CA-CA angle
+quick   sele resid @oldi .and. type CA end -
+        sele resid @i .and. type CA end -
+        sele resid @nexti .and. type CA end
+set cacacaangle ?thet
+
+! calculate CB-CA-CA angle
+quick   sele resid @oldi .and. type CB end -
+        sele resid @oldi .and. type CA end -
+        sele resid @i .and. type CA end
+set cbcacaangle ?thet
+
+! calculate CA-CA-CB angel
+quick   sele resid @oldi .and. type CA end -
+        sele resid @i .and. type CA end -
+        sele resid @i .and. type CB end
+set cacacbangle ?thet
+
+write title unit 32
+*A@oldi A@i A@nexti 12.5 @cacacaangle
+*B@oldi A@oldi A@i 12.5 @cbcacaangle
+*A@oldi A@i B@i 12.5 @cacacbangle
+ 
+! calculate backbone dihedral
+quick sele resid @oldi .and. type CA end -
+        sele resid @i .and. type CA end -
+        sele resid @nexti .and. type CA end -
+        sele resid @nextti .and. type CA end 
+set cacacacaphi ?phi
+
+
+write title unit 33
+*A@oldi A@i A@nexti A@nextti 0.90  3  -66.5
+*A@oldi A@i A@nexti A@nextti 2.27 2  -68.1
+*A@oldi A@i A@nexti A@nextti 2.91 1  -37.3
+ 
+
+! calculate improper dihedral CA CA- CA+ CB for side chain
+quick sele resid @i .and. type CA end -
+	sele resid @oldi .and. type CA end -
+	sele resid @nexti .and. type CA end -
+	sele resid @i .and. type CB end
+set imph ?phi
+
+write title unit 34
+*A@i A@oldi A@nexti B@i 20.0 0.0  @imph
+  
+
+label nextres
+
+incr i by 1
+if i le @nmax goto loop_res
+
+
+! === end frames loop ====
+
+bomlev -5
+
+print coor sele segid CH1 .and. ( type CA .or. type CB ) end
+dele atoms sele .not. ( type CA .or. type CB ) end
+
+open unit 25 write card name cl_ca_cb.psf
+write psf card unit 25
+
+open unit 26 write card name cl_ca_cb.cor
+write coor card unit 26
+
+
+stop
