@@ -29,7 +29,7 @@ writenbfix(cb,cb,eminb,8,nbfix,reportfile) # doing the same for CB-CB's
 writenbfix(cb,ca,eminb,8,nbfix,reportfile) # doing the same for CB-CA's, **** Smaller c, should be first ****
 
 
-rtf=open('./ch1_2bead.rtf','w+') # it opens a file to write the topology file 
+rtf=open('./cl_2bead.rtf','w+') # it opens a file to write the topology file 
 writertf(ca,100,cb,200,rtf) # Writing RTF file, MASS CA=100, MASS CB=200
 
 # Merge all parts of parameter file
